@@ -309,7 +309,7 @@ export namespace LaunchPrecheck {
       if (e.code !== 'EEXIST') { throw e }
     })
     const natives = version.libraries.filter((lib) => lib.isNative || lib.classifier.startsWith('natives'))
-    const checksumFile = join(native, '.json')
+    const checksumFile = join(native, 'natives.json')
     const includedLibs = natives.map((n) => n.name).sort()
 
     interface ChecksumFile { entries: CheckEntry[]; libraries: string[] }
